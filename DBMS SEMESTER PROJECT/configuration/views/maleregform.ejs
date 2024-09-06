@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Regiteration</title>
+</head>
+
+<body>
+    <div class="login_container">
+        <div class="con-con">
+
+            <h1>Register</h1>
+            <form action="http://localhost:3000/maleadding" method="post">
+                <input type="text" name="first_name" placeholder="First name" value="<%=data.first_name%>">
+                <input type="text" name="last_name" placeholder="Last name" value="<%=data.last_name%>">
+                <input type="text" name="father_CNIC" placeholder="CNIC(e.g.1234567890123)" value="<%=data.father_CNIC%>">
+                <input type="radio" name="gender" value="Male" class="Mf" checked="checked">
+                <label for="Male">Male</label>
+
+
+                <input type="text" name="DOB" placeholder="DD-MM-YYYY">
+                <input type="text" name="address" placeholder="Address">
+                <input type="text" name="city" placeholder="city">
+                <input type="text" name="district" placeholder="district">
+                <input type="text" name="province" placeholder="province">
+                <input type="text" name="marital_status" placeholder="married/not married">
+                <input type="submit" name="reg_btn" value="Register">
+            </form>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Search for person</title>
+</head>
+
+<body>
+    <div class=searchRec_con>
+        <div class="search_results">
+            <div class="search-container">
+                <form action="http://localhost:3000/search" method="post">
+                    <input type="text" name="CNIC" placeholder="CNIC(e.g.1234567890123)">
+                    <input type="submit" name="search_btn" value="Search">
+                </form>
+            </div>
+            <div class="table_con">
+                <table>
+                    <tr>
+                        <th>CNIC</th>
+                        <th>Gender</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Father CNIC</th>
+                        <th>DoB</th>
+                        <th>Address</th>
+                        <th>city</th>
+                        <th>Marital status</th>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <%= typeof data!='undefined' ? data.cnic : '' %>
+                        </td>
+
+
+                        <td>
+
+                            <%= typeof data!='undefined' ? data.gender : '' %>
+                        </td>
+
+                        <td id="sfname">
+                            <%= typeof data!='undefined' ? data.first_name : '' %>
+                        </td>
+                        <td id="slname">
+                            <%= typeof data!='undefined' ? data.last_name : '' %>
+                        </td>
+                        <td id="sfcnic">
+                            <%= typeof data!='undefined' ? data.father_id : '' %>
+                        </td>
+                        <td id="sdob">
+                            <%= typeof data!='undefined' ? data.DoB : '' %>
+                        </td>
+                        <td id="saddress">
+                            <%= typeof data!='undefined' ? data.address : '' %>
+                        </td>
+                        <td id="scity">
+                            <%= typeof data!='undefined' ? data.city_name : '' %>
+                        </td>
+                        <td id="smarital">
+                            <%= typeof data!='undefined' ? data.martial_status : '' %>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
